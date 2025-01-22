@@ -1,95 +1,59 @@
-/**
- * Created by Rashid Khan Ap
- * May 2020
+/* Created by Rashid Khan Ap
+ * Enhanced in 2025
  */
 
-
 /*******************************************************************************
- * Element styles
+ * Global Styles
  ******************************************************************************/
 
 html {
-  font-family: sans-serif;
+  font-family: 'Arial', sans-serif;
   padding: 10px;
 }
 
 body {
-  padding: 15px;
-  display: block;
   margin: auto;
   max-width: 66ch;
+  padding: 15px;
+  display: block;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  color: #333;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 p {
-  text-align: justify;
+  margin: 1em 0;
 }
 
 ul, ol {
   padding-left: 1em;
+  margin: 1em 0;
 }
 
 ol li {
   margin-bottom: 1em;
 }
 
-button {
-  padding: 11px;
-  background: rgb(95, 158, 160);
-  color: white;
-  border: 0.5px solid white;
-  border-radius: 5px;
-  margin-top: 5px;
-  margin-right: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  white-space: nowrap;
-}
-
-label {
-  display: block;
-  font-variant: small-caps;
-  margin-bottom: 5px;
-}
-
-summary {
-  font-variant: small-caps;
-  margin-bottom: 5px;
-  user-select: none;
-}
-
-input, textarea {
-  padding: 10px;
-  border: 0.5px solid black;
-  border-radius: 3px;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-  width: 100%;
-  resize: none;
-  font-family: sans-serif;
-  font-size: 0.9em;
-}
-
-input[type="checkbox"] {
-  cursor: pointer;
-  margin-right: 0;
-}
-
 hr {
-  margin-top: 3em;
-  margin-bottom: 3em;
-  border: 0;
-  border-top: 0.5px solid rgba(200, 200, 200, 1);
+  margin: 3em 0;
+  border: none;
+  border-top: 1px solid rgba(200, 200, 200, 0.5);
 }
 
 footer hr {
-  margin-bottom: 1em;
-  border-top: 0.5px solid black;
+  margin: 1em 0;
+  border-top: 1px solid #333;
 }
 
 footer p {
   text-align: center;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.7);
 }
 
+/* Disable Interaction for Certain Elements */
 *[aria-disabled="true"] {
   pointer-events: none;
   cursor: not-allowed;
@@ -99,29 +63,127 @@ footer p {
 code {
   font-family: monospace, monospace;
   padding: 0 3px;
+  background: #f9f9f9;
+  border-radius: 3px;
 }
-
 
 /*******************************************************************************
- * Classes
+ * Button Styles
  ******************************************************************************/
 
-/* View on GitHub SVG ribbon */
-@media (max-width: 100ch) {
-  .ribbon {
-    width: 100px;
-    height: 100px;
-  }
+button, .bookmark {
+  padding: 12px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.ribbon {
-  position: absolute;
-  top: 0;
-  right: 0;
+button:hover, .bookmark:hover {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+button:active, .bookmark:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 
-/* Error area */
+.bookmark {
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px;
+  text-align: center;
+}
+
+.bookmark[aria-disabled="true"] {
+  background: rgba(235, 235, 235, 1);
+  color: gray;
+  border: 2px solid gray;
+}
+
+/*******************************************************************************
+ * Input and Form Styles
+ ******************************************************************************/
+
+label {
+  display: block;
+  font-variant: small-caps;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+input:focus, textarea:focus {
+  border-color: #ff416c;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 65, 108, 0.5);
+}
+
+textarea {
+  resize: none;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+/*******************************************************************************
+ * Advanced Settings
+ ******************************************************************************/
+
+.advanced {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+.advanced .labeled-input {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.advanced .labeled-input label {
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+/*******************************************************************************
+ * Password Inputs
+ ******************************************************************************/
+
+.split-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.password, .confirm-password {
+  flex: 1;
+}
+
+/*******************************************************************************
+ * Error Styles
+ ******************************************************************************/
+
 .red-border {
   border: 3px solid red;
   padding: 2em;
@@ -129,61 +191,18 @@ code {
 
 .error, .error p {
   text-align: center;
+  color: red;
+  font-weight: bold;
 }
 
+/*******************************************************************************
+ * Output Area
+ ******************************************************************************/
 
-/* Password & Confirm Password inputs */
-.split-row {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.password {
-  flex: 1;
-}
-
-.confirm-password {
-  flex: 1;
-  margin-left: 20px;
-}
-
-
-
-/* Advanced settings */
-#advanced-label {
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-
-.advanced {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.advanced .labeled-input {
-  display: flex;
-  flex-flow: row-reverse nowrap;
-  justify-content: flex-end;
-}
-
-.advanced .labeled-input label {
-  width: auto;
-  margin-right: 20px;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.advanced .labeled-input input {
-  width: auto;
-  margin-right: 5px;
-}
-
-
-/* Output area */
 .output input {
-  background: rgba(235, 235, 235, 1);
+  background: rgba(245, 245, 245, 1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #333;
 }
 
 .alert {
@@ -191,46 +210,19 @@ code {
   transition: opacity 0.25s;
 }
 
+/*******************************************************************************
+ * SVG Ribbon
+ ******************************************************************************/
 
-/* Bookmarks that look like buttons, but different */
-.bookmark {
-  padding: 11px;
-  background: none;
-  color: rgb(95, 158, 160);
-  border: 3px solid;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-top: 5px;
-  margin-right: 5px;
-  cursor: pointer;
-  display: inline-block;
-  margin: auto;
-  text-align: center;
+.ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-.bookmark:hover {
-  background: rgb(95, 158, 160);
-  color: white;
-  border: 3px solid rgb(95, 158, 160);
+@media (max-width: 100ch) {
+  .ribbon {
+    width: 100px;
+    height: 100px;
+  }
 }
-
-.bookmark[aria-disabled="true"] {
-  background: rgba(235, 235, 235, 1);
-  color: gray;
-}
-
-/* Buttons on the same line as inputs */
-.inline-button-container {
-  display: flex;
-  width: 100%;
-}
-
-.inline-button-container * {
-  margin: 5px;
-}
-
-.inline-button-container input {
-  margin-left: 0;
-}
-
