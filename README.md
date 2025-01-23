@@ -1,18 +1,18 @@
-# Link Lock
+# SecURL
 
 [Password-protect URLs using AES in the
 browser.](https://Rashikhanap.github.io/SecURL)
 
-Link Lock now supports secure, hidden bookmarks via bookmark knocking! Read
+SecURL now supports secure, hidden bookmarks via bookmark knocking! Read
 more [here](https://Rashikhanap.github.io/projects/hidden-bookmarks).
 
 
 
 ## About
 
-Link Lock is a tool for encrypting and decrypting URLs. When a user visits an
+SecURL is a tool for encrypting and decrypting URLs. When a user visits an
 encrypted URL, they will be prompted for a password. If the password is
-correct, Link Lock retrieves the original URL and then redirects there.
+correct, SecURL retrieves the original URL and then redirects there.
 Otherwise, an error is displayed. Users can also add hints to display near the
 password prompt.
 
@@ -21,7 +21,7 @@ application. As a result, users control all the data they create with Link
 Lock. Nothing is ever stored on a server, and there are no cookies, tracking,
 or signups.
 
-Link Lock has many uses:
+SecURL has many uses:
 
 - Store private bookmarks on a shared computer
 - Encrypt entire web pages (via [URL
@@ -34,7 +34,7 @@ Link Lock has many uses:
 - Share password-protected magnet links and torrents
 - [Evade censorship](#evading-censorship)
 
-Link Lock uses AES in GCM mode to securely encrypt passwords, and PBKDF2 and
+SecURL uses AES in GCM mode to securely encrypt passwords, and PBKDF2 and
 salted SHA-256 (100,000 iterations) for secure key derivation. Encryption,
 decryption, and key derivation are all performed by the [`SubtleCrypto`
 API](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto). The
@@ -43,7 +43,7 @@ Randomization of both the initialization vector and salt can be enabled or
 disabled by the user via "advanced options." The salt and initialization vector
 are sent with the encrypted data if they are randomly generated. The API is
 versioned such that old encrypted links will always work, even if later
-versions of Link Lock are updated to be more secure. Please read the code
+versions of SecURL are updated to be more secure. Please read the code
 ([`api.js`](https://github.com/Rashikhanap/SecURL/blob/master/api.js) in
 particular) for more information.
 
@@ -111,17 +111,17 @@ me to build a secure encryption application. In particular:
   curse if you are not careful!
 - Currently, the only way to recover a lost password is by trying all possible
   options (very slowly) by brute force. An example application to brute force
-  Link Lock URLs in the browser can be found here:
+  SecURL URLs in the browser can be found here:
   <https://Rashikhanap.github.io/SecURL/bruteforce>.
 - A parallelized, cross-platform, CPU-based brute forcer can be found here:
   <https://github.com/Rashikhanap/bruteforce-SecURL>
-- If you receive a Link Lock URL that you do not trust, decrypt it using this
+- If you receive a SecURL URL that you do not trust, decrypt it using this
   interface that does not automatically redirect:
   <https://Rashikhanap.github.io/SecURL/decrypt>.
 
 ### Evading Censorship
 
-Link Lock can be used to evade censorship. If you are concerned that sending
+SecURL can be used to evade censorship. If you are concerned that sending
 links with the `Rashikhanap.github.io` domain name will put you at risk, just
 replace the domain with another. For example, share
 
@@ -139,7 +139,7 @@ Any domain can be used in place of `wikipedia.org`. That way, a malicious
 third-party who clicks the altered link will be taken to a valid page, which
 helps alleviate suspicion. When sharing the password to unlock the link,
 explain how to switch out the domain name with either
-`Rashikhanap.github.io/SecURL`, or with the path to a local clone of Link Lock.
+`Rashikhanap.github.io/SecURL`, or with the path to a local clone of SecURL.
 Using a local copy is particularly recommended for evading censorship, since no
 request to my domain is ever made.
 
@@ -158,11 +158,11 @@ recommended. Entire web pages can be shared safely and secretly this way.
 
 This project is actively maintained. If there are no recent commits, it means
 that everything has been running smoothly! Even if the link storage protocol
-is updated, Link Lock is designed to be 100% backwards-compatible, so your
+is updated, SecURL is designed to be 100% backwards-compatible, so your
 locked links will never break.
 
 Even if something were to happen to me, and I could not continue to work on
-the project, Link Lock will continue to work as long as my GitHub account is
+the project, SecURL will continue to work as long as my GitHub account is
 open and the [Rashikhanap.github.io](https://Rashikhanap.github.io) domain is online.
 
 
@@ -188,7 +188,7 @@ reflected XSS vulnerability resulting from allowing non-hypertext protocols in
 the URL. The vulnerability has since been fixed.
 
 Thank you to Guillaume ([@gverdun](https://link.di20.net)) for
-translating Link Lock into French, and hosting a translated version. Likewise,
+translating SecURL into French, and hosting a translated version. Likewise,
 thanks to Nele Hirsch ([@eBildungslabor](https://github.com/eBildungslabor/))
 for translating and hosting a German version, and to Piotr Wereszczyński
 ([@YourSenseiCreeper](https://github.com/YourSenseiCreeper)) for translating
