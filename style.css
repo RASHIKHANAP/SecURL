@@ -1,236 +1,231 @@
-/**
- * Created by Rashid Khan Ap
- * May 2020
- */
+/* General Resets and Global Styles */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#163056, #000000, #000a2a, #2c1f38);
+  color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
 
+a {
+  text-decoration: none;
+  color: #62ff00;
+  transition: color 0.3s ease;
+}
 
-/*******************************************************************************
- * Element styles
- ******************************************************************************/
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
 
- html {
-    font-family: sans-serif;
-    padding: 10px;
-  }
-  
-  body {
-    padding: 15px;
-    display: block;
-    margin: auto;
-    max-width: 66ch;
-  }
-  
-  p {
-    text-align: justify;
-  }
-  
-  ul, ol {
-    padding-left: 1em;
-  }
-  
-  ol li {
-    margin-bottom: 1em;
-  }
-  
-  button {
-    padding: 11px;
-    background: rgb(95, 158, 160);
-    color: white;
-    border: 0.5px solid white;
-    border-radius: 5px;
-    margin-top: 5px;
-    margin-right: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    white-space: nowrap;
-  }
-  
-  label {
-    display: block;
-    font-variant: small-caps;
-    margin-bottom: 5px;
-  }
-  
-  summary {
-    font-variant: small-caps;
-    margin-bottom: 5px;
-    user-select: none;
-  }
-  
-  input, textarea {
-    padding: 10px;
-    border: 0.5px solid black;
-    border-radius: 3px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-    width: 100%;
-    resize: none;
-    font-family: sans-serif;
-    font-size: 0.9em;
-  }
-  
-  input[type="checkbox"] {
-    cursor: pointer;
-    margin-right: 0;
-  }
-  
-  hr {
-    margin-top: 3em;
-    margin-bottom: 3em;
-    border: 0;
-    border-top: 0.5px solid rgba(200, 200, 200, 1);
-  }
-  
-  footer hr {
-    margin-bottom: 1em;
-    border-top: 0.5px solid black;
-  }
-  
-  footer p {
-    text-align: center;
-  }
-  
-  *[aria-disabled="true"] {
-    pointer-events: none;
-    cursor: not-allowed;
-    user-select: none;
-  }
-  
-  code {
-    font-family: monospace, monospace;
-    padding: 0 3px;
-  }
-  
-  
-  /*******************************************************************************
-   * Classes
-   ******************************************************************************/
-  
-  /* View on GitHub SVG ribbon */
-  @media (max-width: 100ch) {
-    .ribbon {
-      width: 100px;
-      height: 100px;
-    }
-  }
-  
-  .ribbon {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  
-  
-  /* Error area */
-  .red-border {
-    border: 3px solid red;
-    padding: 2em;
-  }
-  
-  .error, .error p {
-    text-align: center;
-  }
-  
-  
-  /* Password & Confirm Password inputs */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1.5em;
+  color: #ff0000;
+}
+
+/* Error Message Box */
+.error {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  padding: 15px;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  margin: 20px auto;
+  max-width: 90%;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Main Form */
+.form {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.labeled-input {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+input[type="url"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #111827;
+  background-color: #f9fafb;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.split-row {
+  display: flex;
+  gap: 15px;
+}
+
+.split-row .labeled-input {
+  flex: 1;
+}
+
+/* Advanced Options */
+details {
+  margin-top: 20px;
+  background: #f3f4f6;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+details summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+details[open] summary {
+  color: #1d4ed8;
+}
+
+.advanced {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.advanced label {
+  margin-right: 10px;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Buttons */
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1e40af, #9333ea);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.4);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #2563eb, #a855f7);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.6);
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+  transform: translateY(0);
+}
+
+/* Add click sound */
+button:focus-visible::after {
+  content: none;
+}
+
+/* Output Section */
+.output {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.output input {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #111827;
+  background-color: #f9fafb;
+  margin: 10px 0;
+}
+
+.output input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+  outline: none;
+}
+
+.output .alert {
+  color: #10b981;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+footer a {
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+footer a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .split-row {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
   }
-  
-  .password {
-    flex: 1;
+
+  input[type="url"],
+  input[type="password"],
+  textarea {
+    font-size: 1rem;
   }
-  
-  .confirm-password {
-    flex: 1;
-    margin-left: 20px;
-  }
-  
-  
-  
-  /* Advanced settings */
-  #advanced-label {
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-  
-  .advanced {
-    display: flex;
-    flex-flow: row wrap;
-  }
-  
-  .advanced .labeled-input {
-    display: flex;
-    flex-flow: row-reverse nowrap;
-    justify-content: flex-end;
-  }
-  
-  .advanced .labeled-input label {
-    width: auto;
-    margin-right: 20px;
-    white-space: nowrap;
-    cursor: pointer;
-  }
-  
-  .advanced .labeled-input input {
-    width: auto;
-    margin-right: 5px;
-  }
-  
-  
-  /* Output area */
-  .output input {
-    background: rgba(235, 235, 235, 1);
-  }
-  
-  .alert {
-    opacity: 0;
-    transition: opacity 0.25s;
-  }
-  
-  
-  /* Bookmarks that look like buttons, but different */
-  .bookmark {
-    padding: 11px;
-    background: none;
-    color: rgb(95, 158, 160);
-    border: 3px solid;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 5px;
-    margin-right: 5px;
-    cursor: pointer;
-    display: inline-block;
-    margin: auto;
-    text-align: center;
-  }
-  
-  .bookmark:hover {
-    background: rgb(95, 158, 160);
-    color: white;
-    border: 3px solid rgb(95, 158, 160);
-  }
-  
-  .bookmark[aria-disabled="true"] {
-    background: rgba(235, 235, 235, 1);
-    color: gray;
-  }
-  
-  /* Buttons on the same line as inputs */
-  .inline-button-container {
-    display: flex;
+
+  button {
     width: 100%;
+    margin-top: 15px;
   }
-  
-  .inline-button-container * {
-    margin: 5px;
-  }
-  
-  .inline-button-container input {
-    margin-left: 0;
-  }
-  
+}
