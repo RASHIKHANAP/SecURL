@@ -1,5 +1,6 @@
-![Background](https://github.com/RASHIKHANAP/HostPlace/blob/main/bluegradient.svg)
-
+<p align="center">
+  <img src="https://github.com/RASHIKHANAP/HostPlace/blob/main/bluegradient.svg" width="100%" height="auto">
+</p>
 
 
 
