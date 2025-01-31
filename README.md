@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="https://github.com/RASHIKHANAP/HostPlace/blob/main/bluegradient.svg" width="100%" height="auto">
+</p>
+
+
+
 # SecURL
 
 [Password-protect URLs using AES in the
