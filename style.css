@@ -100,7 +100,7 @@ textarea {
 /* Advanced Options */
 details {
   margin-top: 20px;
-  background: #f3f4f6;
+  background: #a0f65a;
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #e5e7eb;
@@ -152,11 +152,6 @@ button:active {
   transform: translateY(0);
 }
 
-/* Add click sound */
-button:focus-visible::after {
-  content: none;
-}
-
 /* Output Section */
 .output {
   max-width: 650px;
@@ -192,6 +187,16 @@ button:focus-visible::after {
   margin-top: 15px;
 }
 
+/* Paragraph Styling */
+p {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5;
+  color: #ffffff;
+  margin: 1em 0;
+}
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -214,18 +219,49 @@ footer a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .split-row {
-    flex-direction: column;
+  body {
+    padding: 0 15px;
   }
 
-  input[type="url"],
-  input[type="password"],
-  textarea {
-    font-size: 1rem;
+  .split-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-top: 1em;
+  }
+
+  .form,
+  .output {
+    padding: 15px;
+    box-shadow: none;
   }
 
   button {
     width: 100%;
     margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  input[type="url"],
+  input[type="password"],
+  textarea {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
   }
 }

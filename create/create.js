@@ -3,8 +3,6 @@
  * May 2020
  */
 
-
-
 /*******************************************************************************
  * Helper Functions
  ******************************************************************************/
@@ -17,7 +15,6 @@ function highlight(id) {
   output.setSelectionRange(0, output.value.length + 1);
   return output;
 }
-
 
 // Validate all inputs, and display an error if necessary
 function validateInputs() {
@@ -59,7 +56,6 @@ function validateInputs() {
   return true;
 }
 
-
 // Perform encryption based on parameters, and return a base64-encoded JSON
 // object containing all of the relevant data for use in the URL fragment.
 async function generateFragment(url, passwd, hint, useRandomSalt, useRandomIv) {
@@ -89,8 +85,6 @@ async function generateFragment(url, passwd, hint, useRandomSalt, useRandomIv) {
   // Return the base64-encoded output
   return b64.encode(JSON.stringify(output));
 }
-
-
 
 /*******************************************************************************
  * Main UI Functions
@@ -142,7 +136,6 @@ async function onEncrypt() {
   });
 }
 
-
 // Activated when the "Copy" button is pressed
 function onCopy(id) {
   // Select and copy
@@ -159,7 +152,6 @@ function onCopy(id) {
   output.selectionEnd = output.selectionStart;
   output.blur();
 }
-
 
 // Activated when a user tries to disable randomization of the IV -- adds a
 // scary warning that will frighten off anyone with common sense, unless they
