@@ -1,0 +1,49 @@
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+      padding: 0 10px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+      margin-top: 1em;
+    }
+  
+    .form,
+    .output {
+      padding: 20px;
+      box-shadow: none;
+    }
+  
+    button {
+      width: 100%;
+      margin-top: 15px;
+    }
+  
+    .split-row {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    input[type="url"],
+    input[type="password"],
+    textarea {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  
+    label {
+      font-size: 0.9rem;
+    }
+  
+    footer {
+      font-size: 0.8rem;
+    }
+  }
+  
