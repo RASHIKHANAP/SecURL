@@ -1,3 +1,7 @@
+![Background](https://github.com/RASHIKHANAP/HostPlace/blob/main/bluegradient.svg)
+
+
+
 <p align="center">
   <img src="https://github.com/RASHIKHANAP/HostPlace/blob/main/SecURL.png" width="auto" height="auto">
 </p>
@@ -85,13 +89,7 @@ me to build a secure encryption application. In particular:
 - I am not comfortable using JavaScript, and I don't have a firm grasp of the nuances of the language – there may be bugs that I don't even know to check for.
 - This is the first project I have ever done using encryption – there is likely a subtle mistake somewhere.
 - Most of the encryption/decryption code is based on [MDN tutorials](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/deriveKey#PBKDF2_2) for the `SubtleCrypto` API.</span>
-
-
-## Usage
-
-- Create a locked link here: [https://Rashikhanap.github.io/SecURL](https://Rashikhanap.github.io/SecURL).
-- Once you have a locked link, create a hidden bookmark here:
-  <https://Rashikhanap.github.io/SecURL/hidden>.
+s://Rashikhanap.github.io/SecURL/hidden>.
 - Use the advanced options when creating a link to make the encryption more
   secure (at the cost of a longer link).
     - By default, the initialization vector is randomized for security, but
