@@ -1,4 +1,4 @@
-![Background](https://github.com/user-attachments/assets/84a31415-fba6-4fd6-8329-bf1174e91dd6)
+![Background](https://github.com/RASHIKHANAP/HostPlace/blob/main/bluegradient.svg)
 
 
 
