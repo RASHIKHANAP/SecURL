@@ -76,9 +76,6 @@ r/programming](https://www.reddit.com/r/programming/comments/i5kpjx/link_lock_is
 The code was written to be read. Please read it, especially if you don't trust
 me to build a secure encryption application. In particular:
 
-- ~~I am a college student, not a security professional – there may be best
-  practices I am not aware of.~~ I have graduated college, and now work for a
-  cybersecurity company. 
 - Once someone decrypts a link, they can share the original URL as much as they
   want. Only share encrypted links with trusted people.
 - I am not comfortable using JavaScript, and I don't have a firm grasp of the
