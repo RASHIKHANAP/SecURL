@@ -1,9 +1,0 @@
-<theme>
-    <background>
-        <image>https://github.com/RASHIKHANAP/HostPlace/blob/main/bluegradient.svg</image>
-        <style>
-            <property name="background-size">cover</property>
-            <property name="padding">20px</property>
-        </style>
-    </background>
-</theme>

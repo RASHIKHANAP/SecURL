@@ -14,6 +14,9 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="../style.css" type="text/css" />
+  <style>
+    /* Add your CSS styles here */
+  </style>
 
   <!-- Scripts -->
   <script type="text/javascript" src="../b64.js"></script>
@@ -164,16 +167,37 @@
       <button>Get Shortened Link</button>
     </form>
   </div>
-
   <footer>
     <p class="alert">Copied</p>
-  </div>
+  </footer>
 
   <!-- Page footer -->
   <footer>
   <hr />
-  <p class="copyright">Created by <a href="https://RASHIKHANAP.github.io">Rashid Khan Ap</a>.</p>
-  </footer>
+  <p class="copyright">Developed by <a href="https://RASHIKHANAP.github.io">Rashid Khan Ap</a>.</p>
+  <p>Follow me on Instagram: 
+    <a href="https://www.instagram.com/rashidkhanap" target="_blank">
+      <img src="../instagram-logo.png" alt="Instagram" style="width: 20px; height: 20px; vertical-align: middle;">
+      @rashidkhanap
+    </a>
+  </p>
+</footer>
+
+  <!-- Audio element for click -->
+  <audio id="click" src="click.mp3"></audio>
+
+  <!-- JavaScript to play click on button click -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var click = document.getElementById('click');
+
+      document.querySelectorAll('button').forEach(function(button) {
+        button.addEventListener('click', function() {
+          click.play();
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
