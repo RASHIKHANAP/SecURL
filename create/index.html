@@ -27,7 +27,6 @@
       document.querySelector("#errortext").innerText = `Error: ${text}`;
     }
 
-
     // Run when the <body> loads
     function main() {
       // Fail if the b64 library or API was not loaded
@@ -35,13 +34,12 @@
         error("Base64 library not loaded.");
         return;
       }
-      if (!("apiVersions" in window)) {
+      if (!("api" in window)) {
         error("API library not loaded.");
         return;
       }
     }
   </script>
-  <script type="text/javascript" src="create.js"></script>
 </head>
 
 <body onload="main()">
@@ -167,21 +165,21 @@
       <button>Get Shortened Link</button>
     </form>
   </div>
-  <footer>
-    <p class="alert">Copied</p>
+  <footer style="background-color: black; color: white; padding: 10px;">
+    <p class="alert" style="color: red;">Copied</p>
   </footer>
 
   <!-- Page footer -->
-  <footer>
-  <hr />
-  <p class="copyright">Developed by <a href="https://RASHIKHANAP.github.io">Rashid Khan Ap</a>.</p>
-  <p>Follow me on Instagram: 
-    <a href="https://www.instagram.com/rashidkhanap" target="_blank">
-      <img src="../instagram-logo.png" alt="Instagram" style="width: 20px; height: 20px; vertical-align: middle;">
-      @rashidkhanap
-    </a>
-  </p>
-</footer>
+  <footer style="background-color: black; color: white; padding: 10px;">
+    <hr />
+    <p class="copyright">Developed by <a href="https://RASHIKHANAP.github.io" style="color: white;">Rashid Khan Ap</a>.</p>
+    <p>Follow me on Instagram: 
+      <a href="https://www.instagram.com/rashidkhanap" target="_blank" style="color: white;">
+        <img src="instagram.png" alt="Instagram" style="width: 20px; height: 20px; vertical-align: middle;">
+        @rashidkhanap
+      </a>
+    </p>
+  </footer>
 
   <!-- Audio element for click -->
   <audio id="click" src="click.mp3"></audio>
