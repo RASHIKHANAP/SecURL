@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/RASHIKHANAP/HostPlace/blob/main/SecURL.png" width="auto" height="auto">
+  <img src="https://github.com/RASHIKHANAP/HostPlace/raw/main/SecURL.png" width="auto" height="auto">
 </p>
 
 
